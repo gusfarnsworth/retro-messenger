@@ -1,0 +1,24 @@
+/* Run: npm run test:games — lightweight deterministic game state regressions. */
+const fs=require('node:fs');const path=require('node:path');const assert=require('node:assert/strict');
+const ts=require('typescript');
+const file=path.join(__dirname,'../src/MessengerGameRules.ts');
+const source=fs.readFileSync(file,'utf8');
+const {outputText,diagnostics}=ts.transpileModule(source,{fileName:file,reportDiagnostics:true,compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022}});
+assert.equal(diagnostics?.filter(d=>d.category===ts.DiagnosticCategory.Error).length,0,'TypeScript transpilation failed');
+const mod={exports:{}};new Function('exports','module',outputText)(mod.exports,mod);const game=mod.exports;
+const room=(kind)=>({id:'room',conversation_id:'conversation',game_type:kind,inviter_id:'a',opponent_id:'b',status:'active',turn_id:'a',winner_id:null,seed:12,move_number:0,created_at:'2026-11-18',updated_at:'2026-11-18'});
+const move=(seq,who,action)=>({seq,player_id:who,action});
+assert.equal(game.GAMES.length,10);
+assert.equal(game.derive(room('tictactoe'),[move(1,'a',{cell:0}),move(2,'b',{cell:3}),move(3,'a',{cell:1}),move(4,'b',{cell:4}),move(5,'a',{cell:2})]).winner,0);
+assert.equal(game.derive(room('connect4'),[move(1,'a',{column:0}),move(2,'b',{column:1}),move(3,'a',{column:0}),move(4,'b',{column:1}),move(5,'a',{column:0}),move(6,'b',{column:1}),move(7,'a',{column:0})]).winner,0);
+assert.equal(game.derive(room('mines'),[move(1,'a',{cell:0,hit:true}),move(2,'b',{cell:1,hit:false})]).score[0],1);
+const checkers=game.derive(room('checkers'),[]).board;
+assert.equal(checkers.length,64);assert.equal(game.checkerValid(checkers,40,33,0).ok,true);
+const chess=game.derive(room('chess'),[]).board;assert.equal(chess.length,64);assert.equal(game.chessValid(chess,52,36,0),true);
+assert.equal(game.derive(room('colourclash'),[]).extra.hands[0].length,6);
+assert.equal(game.derive(room('solitaire'),[]).extra.remaining[0].length,20);
+assert.equal(game.derive(room('match3'),[]).extra.grids[0].length,36);
+assert.equal(game.sudokuCorrect(2,4),true);
+assert.equal(game.derive(room('sudoku'),[move(1,'a',{cell:2,digit:4})]).score[0],1);
+assert.equal(game.derive(room('words'),[move(1,'a',{word:game.wordPuzzle(12).words[0]})]).score[0],1);
+console.log('PASS: ten game types, chess/checkers movement, shared state replay and scoring');

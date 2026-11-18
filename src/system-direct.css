@@ -1,0 +1,35 @@
+/* Retro Messenger — official, no-reply direct-message thread (square MSN chrome). */
+.system-contact-group{margin:5px 0 9px;padding:0 2px}
+.system-contact-group>h3{display:flex;gap:5px;align-items:center;color:#1a5187;font-size:11px;margin:9px 0 5px}
+.system-contact-entry{display:flex;align-items:center;gap:7px;width:100%;padding:7px 5px;border:1px solid #bad2e9;background:linear-gradient(#f9fcff,#e5f1fb);text-align:left;color:#214d79;cursor:pointer;border-radius:0}
+.system-contact-entry:hover{background:#dcecfb;border-color:#7aa9d4}
+.system-mini-avatar{flex:0 0 30px;height:30px;display:grid;place-items:center;color:#fff;border:1px solid #2767a1;background:linear-gradient(#4f9cda,#1b5b9a)}
+.system-contact-text{min-width:0;flex:1;display:flex;flex-direction:column;gap:3px}
+.system-contact-text strong{font-size:11px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.system-contact-text small{font-size:10px;color:#647e97}
+.system-unread-count{display:inline-flex;align-items:center;justify-content:center;background:#b71f25;color:white;min-width:20px;height:20px;font-size:10px;font-weight:700;padding:0 4px}
+.system-thread-window{width:490px;height:540px;min-width:350px;display:flex;flex-direction:column;overflow:hidden;border-radius:0}
+.system-thread-heading{display:flex;align-items:center;gap:11px;padding:12px;border-bottom:1px solid #afc8e0;background:linear-gradient(#fafdff,#dceeff);color:#174775}
+.system-thread-heading>div{display:flex;flex:1;flex-direction:column;gap:4px}
+.system-thread-heading strong{font-size:13px}
+.system-thread-heading small{font-size:11px;color:#5a7794}
+.system-thread-avatar{height:48px;width:48px;display:grid;place-items:center;color:white;background:linear-gradient(#70b3e9,#216bad);border:2px solid white;outline:1px solid #80abc7}
+.system-thread-badge{background:#f5eec9;color:#765300;border:1px solid #bba34e;padding:3px 6px;font-size:10px;font-weight:bold;white-space:nowrap}
+.system-thread-history{flex:1;overflow-y:auto;background:white;margin:10px;border:1px solid #a8c0d8;padding:12px;min-height:0}
+.system-thread-item{padding:7px 0 13px;border-bottom:1px dotted #cbd6e1;margin:0 0 10px;overflow-wrap:anywhere}
+.system-thread-meta{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline;color:#225e9c;font-size:11px}
+.system-thread-meta time{font-size:10px;color:#7f90a2}
+.system-thread-subject{display:block;color:#254360;margin-top:7px;font-size:12px}
+.system-thread-item p{margin:6px 0 0 10px;white-space:pre-wrap;font-size:12px;line-height:1.5;color:#2e4354}
+.system-thread-footer{display:flex;align-items:center;gap:10px;padding:12px;background:linear-gradient(#f6faff,#e5f0fb);border-top:1px solid #b4cbdc;color:#3f6590}
+.system-thread-footer>div{display:flex;flex-direction:column;gap:3px}
+.system-thread-footer b{font-size:11px}
+.system-thread-footer small{font-size:10px;color:#6a849c}
+.chat-only .system-thread-window{width:100%;height:100vh;min-width:0;max-height:none;border:0;box-shadow:none;resize:none}
+.staff-console-tabs{display:flex;gap:5px;flex-wrap:wrap;align-items:center;margin:8px 0 10px;border-bottom:1px solid #a9c5dc;padding-bottom:9px}
+.staff-console-tabs .xp-button.active{background:linear-gradient(#e4f5ff,#b4d8f7);border-color:#568dbd;font-weight:bold}
+.system-direct-compose .staff-no-reply{display:flex;gap:6px;align-items:flex-start}
+.staff-result-error{color:#9a1f1f!important}
+
+/* Personalised first-login greetings (no-reply System conversation). */
+.system-welcome-label{display:inline-block;margin-right:8px;padding:2px 5px;background:#e8f4df;border:1px solid #8eb87b;color:#316d26;font:700 9px Tahoma,Arial,sans-serif;vertical-align:middle}

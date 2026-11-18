@@ -1,0 +1,13 @@
+# Deploy ONLY the Vite website. Never upload Tauri/Rust build files.
+src-tauri/
+target/
+dist/
+*.zip
+*.exe
+*.msi
+*.msix
+*.pdb
+*.log
+.env
+.env.*
+!.env.example

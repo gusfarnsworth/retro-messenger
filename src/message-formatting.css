@@ -1,0 +1,48 @@
+/* v0.9.6 — Compact Messenger formatting toolbar and safe colour menu. */
+.formatted-message-text{white-space:pre-wrap;overflow-wrap:anywhere}
+
+/* One small button in the toolbar, not an always-visible palette or native
+   operating-system colour dialog. The menu opens above the message composer. */
+.safe-color-picker{position:relative;display:inline-flex;align-items:center;flex:0 0 auto!important;min-width:0!important;font:11px Tahoma,Arial,sans-serif;isolation:isolate}
+.composer-tools.rich>.safe-color-picker,.group-format-bar .safe-color-picker{flex:0 0 auto!important;min-width:0!important}
+.safe-color-picker .safe-color-trigger{
+  display:inline-flex!important;align-items:center!important;justify-content:center;gap:4px;
+  width:auto!important;min-width:88px!important;height:23px!important;padding:2px 5px!important;
+  border:1px solid #90b0ce!important;border-radius:0!important;
+  background:linear-gradient(#fff,#deebfa)!important;color:#225783!important;
+  font:10px Tahoma,Arial,sans-serif!important;white-space:nowrap;cursor:pointer;
+}
+.safe-color-picker .safe-color-trigger:hover,.safe-color-picker .safe-color-trigger.is-open{border-color:#467faf!important;background:linear-gradient(#fff,#cde5fb)!important}
+.safe-color-trigger-label{line-height:1}
+.safe-color-picker .safe-color-current{display:inline-block;width:13px;height:13px;flex:0 0 13px;border:1px solid #7c91a5;background-image:none!important;box-shadow:inset 0 0 0 1px #ffffff55}
+.safe-color-picker .safe-color-menu{
+  position:absolute;bottom:calc(100% + 6px);right:0;left:auto;z-index:500;
+  width:217px;max-width:calc(100vw - 24px);padding:9px;
+  background:#f9fcff;border:1px solid #558cbf;outline:1px solid #ffffff;
+  box-shadow:2px 4px 12px #173c6280;
+  color:#24577c;text-align:left;
+}
+.safe-color-menu-title{font-weight:bold;font-size:11px;line-height:1.2;margin:0 0 8px}
+.safe-color-swatches{display:grid;grid-template-columns:repeat(5,1fr);gap:5px}
+.safe-color-picker .safe-color-preset{
+  display:grid!important;place-items:center;width:32px!important;min-width:0!important;
+  height:27px!important;padding:0!important;margin:0!important;
+  border:1px solid #748a9f!important;border-radius:0!important;
+  background-image:none!important;box-shadow:inset 0 0 0 1px #ffffff33;
+  cursor:pointer;
+}
+.safe-color-picker .safe-color-preset:hover{border:2px solid #0d4f8b!important;filter:brightness(1.13)}
+.safe-color-picker .safe-color-preset.selected{outline:2px solid #0e549b;outline-offset:1px}
+.safe-color-picker button:focus-visible{outline:2px solid #145da0!important;outline-offset:2px}
+.safe-color-hint{font-size:10px;line-height:1.4;color:#637d92;margin:9px 0 0}
+
+/* Formatting buttons remain compact; short chat windows can wrap toolbars
+   without showing spare colour boxes or overlapping the message textbox. */
+.composer{position:relative;z-index:20}
+.composer-tools.rich{display:flex;flex-wrap:wrap;align-items:center;gap:4px;margin-bottom:6px;overflow:visible}
+.group-composer{position:relative;z-index:20}
+.group-format-bar{display:flex;align-items:center;flex-wrap:wrap;gap:5px;margin:0 0 7px;overflow:visible}
+.group-format-bar>button{width:25px;height:23px;display:grid;place-items:center;border:1px solid #95b4d0;background:linear-gradient(#fff,#e3effb);color:#2a5685;cursor:pointer;padding:2px}
+.group-format-bar>button.active{background:linear-gradient(#fff3bf,#ffd970);border-color:#caa43f}
+.group-message .formatted-message-text{margin:6px 0 0}
+.message-content>.formatted-message-text{margin:4px 0 0 3px}

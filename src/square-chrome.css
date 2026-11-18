@@ -1,0 +1,44 @@
+/* Retro Messenger v0.5.3: classic square-edged chrome on web and Windows.
+   Loaded last so the complete interface retains consistent 90s/2000s
+   rectangular borders even when an earlier stylesheet uses rounded corners.
+   This intentionally affects the app's panels/controls, not icon artwork. */
+:where(
+  .xp-window,
+  .xp-window *,
+  .web-taskbar,
+  .web-taskbar *,
+  .retro-toast,
+  .retro-toast *,
+  .toast-stack,
+  .toast-stack *,
+  .alert-sidebar-count,
+  .staff-new,
+  .native-mode,
+  .native-login-page,
+  .native-login-page *
+) {
+  border-radius: 0 !important;
+}
+
+/* Status LEDs and the stylised figure in the sign-in logo are iconography,
+   rather than the corners of a window or an interactive control. */
+.status-dot,
+.retro-person-icon::before {
+  border-radius: 50% !important;
+}
+.retro-person-icon > span:first-child {
+  border-radius: 80% 30% 15% 12% !important;
+}
+.retro-person-icon > span:last-child {
+  border-radius: 60% 20% 60% 50% !important;
+}
+
+/* Keep Tauri edge-to-edge, with no second CSS frame around the native window. */
+.native-mode .xp-window,
+.native-login-page .xp-window,
+.settings-only .xp-window,
+.desktop.chat-only.native-mode .xp-window {
+  border-radius: 0 !important;
+  outline: none !important;
+  box-shadow: none !important;
+}

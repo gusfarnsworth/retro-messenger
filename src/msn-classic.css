@@ -1,0 +1,123 @@
+/* MSN Messenger 7.x-inspired compact interface.
+   Original CSS artwork, not Microsoft assets. */
+:root{font-family:Tahoma,'Microsoft Sans Serif',Arial,sans-serif;font-size:11px;color:#183e68;background:#5f95c5}
+body{font-size:11px}button,input,select,textarea{font-family:Tahoma,'Microsoft Sans Serif',Arial,sans-serif}
+.desktop{background:linear-gradient(145deg,#6c9ac3,#83aace 70%,#b6d4e9);min-height:100vh;padding:16px 10px 24px}
+.app-shell{margin:0;gap:12px;max-width:none}.xp-window{border:1px solid #15538f;border-radius:6px 6px 3px 3px;background:#f4f4f4;box-shadow:0 2px 0 #f8fdff inset,0 3px 8px #174a754f;outline:1px solid #7da7cc;outline-offset:-3px}
+.xp-title{height:28px;padding:0 4px 0 7px;border-bottom:1px solid #0d4788;background:linear-gradient(180deg,#80baf1 0%,#3b92e5 15%,#0563cf 43%,#1564c6 82%,#367dd4 100%);text-shadow:0 1px #064378;font-size:11px;font-weight:bold}
+.xp-title-name{gap:5px}.xp-title-name svg{color:white;width:14px;height:14px;filter:drop-shadow(0 1px 1px #083c6e)}
+.window-symbols{gap:3px;opacity:1}.window-symbols svg{height:18px;width:22px;color:#fff;background:linear-gradient(#64a4ea,#1454a1);border:1px solid #b0d5f7;border-radius:3px;box-shadow:0 0 0 1px #215b9a inset;padding:3px}.window-symbols svg:last-child{background:linear-gradient(#fca679,#cc3b26);border-color:#ffd0aa}
+.menu-bar{height:22px;align-items:center;gap:16px;padding:0 9px;background:linear-gradient(#fff,#e2e9f1);border-bottom:1px solid #a8bfd5;color:#153651;font-size:11px}.menu-bar span::first-letter{text-decoration:underline}
+.buddy-window{width:300px;min-width:300px;height:min(625px,calc(100vh - 40px));min-height:450px;background:linear-gradient(#ffffff,#f3f7fd);border-radius:7px 7px 3px 3px}
+.buddy-brand-strip{height:28px;padding:5px 9px;background:linear-gradient(#fff 20%,#e5effc);color:#0d508f;display:flex;align-items:center;justify-content:space-between;font-size:12px}.buddy-brand-strip b i{font-weight:900;letter-spacing:-.7px;color:#1051a1}.buddy-brand-strip span{font-size:9px;color:#649046}
+.my-profile{padding:8px 9px;gap:8px;min-height:68px;background:linear-gradient(150deg,#d4ebfe,#f6fbff 56%,#e7f3ff);border-bottom:1px solid #d0dde8}.my-profile .avatar{width:42px;height:42px}.profile-text strong{color:#173e68;font-size:11px}.profile-text small{font-size:10px;color:#7086a2}.profile-text span{font-size:10px;font-style:normal;color:#7f92a5}.my-profile select{width:84px;font-size:10px;padding:2px 0;border:1px solid #9ab4cb;border-radius:0;background:linear-gradient(white,#eef6ff)}
+.avatar{width:45px;height:45px;border:2px solid #fdfefe;border-radius:6px;background:linear-gradient(140deg,#4098c6,#5ab5a6);box-shadow:0 0 0 1px #7d9baf,0 1px 3px #7893ac;font-size:21px}.avatar.small,.contact-avatar-wrap .avatar.small{width:25px;height:25px;border-radius:3px;font-size:11px}.contact-avatar-wrap .status-dot{bottom:-2px;right:-2px}
+.action-strip{padding:5px 7px;gap:4px;background:linear-gradient(#e9f4ff,#cfdef2);border-bottom:1px solid #a6bfd6}.xp-button{border:1px solid #7e9fbd;border-radius:3px;background:linear-gradient(#fff 0%,#f8fbff 43%,#dceaf8 100%);box-shadow:0 1px 0 #fff inset;padding:4px 7px;color:#1d4972;font-size:10px;gap:4px}.xp-button svg{width:12px;height:12px}.xp-button.primary{background:linear-gradient(#fff,#b4d8fd);border-color:#4784bd}
+.contacts-layout{grid-template-columns:31px 1fr;background:white;min-height:0;flex:1}.buddy-sidebar{padding:7px 2px;gap:9px;background:linear-gradient(90deg,#d6ecff,#f7fbff);border-right:1px solid #d3e0eb}.sidebar-btn{width:27px;min-width:27px;height:31px;border:0;border-radius:3px;box-shadow:none;padding:2px;background:none;color:#226aa2}.sidebar-btn svg{height:21px;width:21px;filter:drop-shadow(0px 1px 1px #4c84ae)}.sidebar-btn.active,.sidebar-btn:hover{background:linear-gradient(#fff9cc,#dbefff);border:1px solid #9abdd7}.sidebar-btn span{display:none}
+.contacts-main{min-height:0}.search-row{margin:7px 7px 3px;border:1px solid #a7bfd4;border-radius:0;padding:5px 5px;background:#fff;gap:5px}.search-row input{font-size:10px}.search-row svg{height:12px;width:12px}
+.buddy-list{padding:0 6px 6px;scrollbar-color:#bfd3e8 #f4f8fc;min-height:0}.buddy-list h3{font-size:11px;color:#0c508f;margin:12px 0 4px;font-weight:bold;gap:3px}.buddy-list h3 svg{height:12px;width:12px}.contact-group{margin:2px 0 9px}.contact-group-title{font-size:10px;padding:3px 6px;margin:2px 0;background:linear-gradient(#f5faff,#e1effd);border:0;border-bottom:1px solid #d2e0ef;border-radius:0;color:#56728d}
+.contact-row{margin:0;border-radius:0;min-height:26px}.contact-row>button{padding:2px 2px;gap:7px;color:#203d5b;font-size:11px}.contact-row>button>span:last-child{flex:1}.contact-row .group-name{display:none!important}.contact-row>button>span:last-child small:last-child{font-size:10px;color:#7891aa;white-space:normal;line-height:1.2}.contact-row details summary{font-size:9px;padding:4px}.contact-menu{z-index:20}.no-contacts{font-size:11px;margin:20px 4px}.empty-group{font-size:10px}
+.status-dot{height:10px;width:10px;border:1px solid white;outline:1px solid #93a4ae}.status-dot.online{background:radial-gradient(circle at 35% 25%,#b6ffa7,#1cb648 65%,#0e8f30)}.status-dot.away{background:radial-gradient(circle at 35% 25%,#fff0a5,#e3a522 70%)}.status-dot.busy{background:radial-gradient(circle at 35% 25%,#ffb7b1,#d94141 72%)}.status-dot.offline,.status-dot.invisible{background:radial-gradient(circle at 35% 25%,#e9eff4,#93a0ae 72%)}
+.buddy-footer{height:30px;font-size:10px;padding:5px 9px;background:linear-gradient(#eff6fe,#d5e6f8);border-top:1px solid #b3cce4;color:#486783}
+.chat-grid{gap:12px}.chat-window{width:490px;height:540px;min-width:360px;background:#f6f6f1}.chat-banner{background:linear-gradient(#f7fbff 0%,#e5f0fc 65%,#dcebf9 100%);padding:8px 10px;border-bottom:1px solid #bbd3e6;min-height:61px;gap:9px}.chat-banner>.avatar{width:45px;height:45px}.chat-banner strong{font-size:12px;color:#174980}.chat-banner span{font-size:10px}.chat-toolbar{height:32px;gap:14px;align-items:center;padding:3px 8px;background:linear-gradient(#fff,#f2f4f6);border-bottom:1px solid #d3d9df}.chat-toolbar button,.chat-toolbar label{font-size:10px;color:#24598d;padding:2px 3px}.chat-toolbar select{border-radius:0;font-size:10px}
+.messages{margin:6px 7px 0;border:1px solid #9bbde5;background:#fff;padding:12px 12px 8px;box-shadow:0 0 0 1px #e7f2ff inset;scrollbar-color:#bed4eb #f1f5f9}.message{margin-bottom:18px}.message-author{gap:12px;color:#a23177;font-size:12px}.message-author.me{color:#0569ca}.message-author time{font-size:10px;color:#96a7b9}.message p{margin:7px 0 0 12px;color:#233f68;font-size:11px;line-height:1.45}.nudge-event{margin:5px 0;padding:9px 7px;border-top:1px dotted #dae4ef;color:#b45f0d;font-size:10px;font-style:normal}
+.composer{background:#f6f6f1;padding:8px 7px 9px}.composer-tools{margin-bottom:5px;gap:4px;min-height:24px}.composer-tools.rich button,.composer-tools.rich label{color:#28629d;border:1px solid #96b5d3;background:linear-gradient(#fff,#deebfa);border-radius:2px;height:23px;min-width:23px;padding:3px 5px;font-size:10px}.composer-tools.rich button.active{background:linear-gradient(#fff8cf,#f6d46f)}.composer-tools.rich .color-picker input{height:18px;width:23px}.composer form{gap:6px;align-items:flex-end}.composer textarea{height:69px;min-height:69px;resize:none;border:1px solid #679de0;border-radius:1px;background:#fff;padding:6px;font-size:11px;box-shadow:0 0 0 1px #fff inset;outline-color:#497dba}.composer form button{height:29px;min-width:66px;align-self:flex-end}.emote-panel{bottom:28px}
+.login-page{background:linear-gradient(145deg,#c2dcf5,#679bcc);padding:12px}.msn-login-window{width:295px;min-width:295px;min-height:530px;max-width:calc(100vw - 20px);background:#fafbff}.classic-login-body{padding:0 22px 11px;align-items:stretch;background:linear-gradient(#f9fcff,#eaf2fc 42%,#fff 70%)}.classic-login-top{justify-content:center;padding-top:21px;margin-bottom:17px}.classic-login-logo{flex-direction:column;gap:12px}.logo-round.classic{width:100px;height:95px;border:1px solid #7fa4d5;border-radius:8px;background:radial-gradient(circle at 45% 15%,#fff,#dceefe 55%,#f8fbfe 100%);box-shadow:none}.retro-person-icon{position:relative;width:72px;height:78px;display:block}.retro-person-icon:before{content:'';position:absolute;left:20px;top:4px;height:33px;width:33px;border-radius:50%;background:radial-gradient(circle at 30% 25%,#b4d99d,#0876a7 66%,#104466);box-shadow:0 1px 1px #345}.retro-person-icon>span:first-child{position:absolute;left:7px;top:35px;width:48px;height:37px;border-radius:80% 30% 15% 12%;transform:rotate(-14deg);background:linear-gradient(115deg,#80c975,#0082a7 65%,#2a4a9a)}.retro-person-icon>span:last-child{position:absolute;left:48px;top:42px;width:22px;height:26px;background:linear-gradient(135deg,#ffbf56,#ff6c19);border-radius:60% 20% 60% 50%;transform:rotate(-17deg);border:1px solid #d65a00}.login-brand-copy{text-align:center}.login-brand-copy h1{font-size:16px;font-weight:bold;margin:0 0 4px;color:#1c4c9b}.login-brand-copy h1 em{font-style:italic;font-weight:900}.login-brand-copy .subtitle{margin:0;color:#7492ad;font-size:10px}.login-stack{gap:7px}.classic-login-form label{font-size:10px;color:#174d91;font-weight:400;gap:4px}.classic-login-form input{padding:4px;border:1px solid #7a9abb;border-radius:0;font-size:11px;height:23px}.classic-login-form select{padding:2px;border:1px solid #9fb2c6;border-radius:0;background:linear-gradient(#fff,#e8f3ff);height:23px;font-size:11px}.login-options{gap:5px;margin:8px 0 4px;padding:0;font-size:10px}.login-options label{font-size:10px}.login-options input{width:13px;height:13px;accent-color:#2d75c4}.login-main-actions{margin-top:8px;flex-direction:column;align-items:center;gap:13px}.signin-btn{min-width:95px;height:27px;font-size:11px}.login-side-links{align-self:stretch;gap:6px}.login-side-links .link-button{padding:0;font-size:10px;text-align:left;color:#065ab6;margin:0;text-decoration:underline}.service-status{font-size:10px}.fineprint{text-align:center;font-size:9px;margin-top:11px;color:#8ca5bd}.notice{font-size:10px;padding:7px}.login-body .stack-form button{padding:4px 7px}
+.messenger-settings-window{background:#f5f5ef}.settings-sidebar{background:linear-gradient(#e3f1ff,#f7fbff)}.settings-sidebar button{border-radius:0}.settings-panel select,.setting-form input{border-radius:0}.font-preview-card{border-radius:0}
+@media(max-width:740px){.desktop{padding:8px}.buddy-window{width:100%;min-width:280px;height:min(680px,85vh)}.contacts-layout{grid-template-columns:31px 1fr}.buddy-sidebar{flex-direction:column;border-right:1px solid #d3e0eb;border-bottom:0}.sidebar-btn{min-width:27px}.chat-window{min-width:0;width:100%;height:550px}.chat-grid{margin-top:10px}.login-main-actions{flex-direction:column}.msn-login-window{width:295px}}
+
+
+/* v0.5.1 — Genuine desktop-window presentation (web fake desktop retained).
+   Native Tauri login should NOT show a second desktop wallpaper or taskbar. */
+.native-login-page {
+  display: block;
+  position: relative;
+  min-height: 0;
+  height: 100vh;
+  width: 100vw;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  background: #f9fbff;
+}
+.native-login-page .msn-login-window {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: auto;
+  left: auto;
+  margin: 0;
+  width: 100%;
+  min-width: 0;
+  max-width: none;
+  height: 100%;
+  min-height: 0;
+  max-height: none;
+  overflow: hidden;
+  border: 0;
+  outline: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+.native-login-page .classic-login-body {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  padding-bottom: 22px;
+}
+.native-login-page .classic-login-top { padding-top: 17px; margin-bottom: 12px; }
+.native-login-page .web-taskbar { display: none !important; }
+
+
+/* v0.5.2 — Borderless native window. Do not affect the browser desktop.
+   The 740px media query above reintroduces 8px padding to .desktop on
+   small Tauri windows; .xp-window also adds a second blue inset outline.
+   The native content is now exactly the size of the OS webview. */
+html, body, #root { margin: 0; }
+.desktop.native-mode {
+  width: 100vw !important;
+  height: 100vh !important;
+  min-height: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: 0 !important;
+  outline: 0 !important;
+  background: #f7f9fd !important;
+  overflow: hidden;
+}
+.desktop.native-mode .xp-window {
+  border: 0 !important;
+  outline: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+.desktop.native-mode .buddy-window,
+.desktop.native-mode .chat-window,
+.desktop.native-mode .settings-window {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  max-height: none !important;
+  min-width: 0 !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 0;
+  resize: none !important;
+}
+.desktop.native-mode .buddy-window,
+.desktop.native-mode .chat-window {
+  display: flex;
+  flex-direction: column;
+}
+/* Sign-in also uses native webview edge-to-edge, not a second simulated frame. */
+.native-login-page,
+.native-login-page .msn-login-window {
+  padding: 0 !important;
+  margin: 0 !important;
+  border: 0 !important;
+  outline: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+.logo-round.classic.logo-card{background:radial-gradient(circle at 45% 15%,#fff,#dceefe 55%,#f8fbfe 100%);padding:4px}.logo-round.classic .hero-logo{width:78px;height:78px}.buddy-brand-strip{display:flex;align-items:center;justify-content:space-between;gap:8px}.buddy-brand-strip .brand-strip-main b{display:inline-flex;align-items:center;gap:0}.buddy-brand-strip .brand-strip-logo{width:17px;height:17px}.native-mode .buddy-brand-strip .brand-strip-logo{width:18px;height:18px}

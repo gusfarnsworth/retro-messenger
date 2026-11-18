@@ -1,0 +1,21 @@
+/* Retro Messenger 0.8 — report moderation and account restriction UI */
+.report-moderation-panel{margin:14px 0;padding:10px;border:1px solid #9fbcd7;background:#f2f7fd;color:#234a6e;font-size:11px}
+.report-moderation-panel h3{display:flex;align-items:center;gap:6px;margin:0 0 6px;color:#1d5e9b;font-size:13px}
+.report-moderation-panel .staff-compose-form{border-top:1px solid #bfd2e4;margin-top:10px;padding-top:10px}
+.report-moderation-panel .staff-compose-form label{font-weight:600}
+.mod-action-list{display:flex;flex-direction:column;gap:8px;margin:10px 0}
+.mod-action-entry{display:flex;flex-direction:column;align-items:flex-start;gap:5px;padding:8px;background:#fff;border:1px solid #c0d3e4}
+.mod-action-entry.active{border-left:3px solid #ca6d28}
+.mod-action-entry p{margin:2px 0;white-space:pre-wrap;line-height:1.4}
+.mod-action-entry small{color:#67849d;font-size:10px;line-height:1.4}
+.mod-action-entry .mod-internal-note{color:#465e70;font-style:italic}
+.mod-action-entry .staff-compose-form{width:100%;border-top:0;margin:4px 0;padding:0}
+.mod-action-buttons{display:flex;flex-wrap:wrap;gap:6px}
+.moderation-chat-banner,.moderation-contacts-notice{display:flex;align-items:flex-start;gap:6px;background:#fff0db;border:1px solid #e4c391;color:#895119;font-size:11px;line-height:1.4;margin:0 0 8px;padding:8px}
+.moderation-contacts-notice{margin:8px}
+.moderation-blocked-page{background:linear-gradient(#c5def7,#eff6ff)!important;padding:12px}
+.moderation-blocked-window{width:420px;max-width:100%;border-radius:0!important}
+.moderation-blocked-content{padding:24px;display:flex;flex-direction:column;align-items:flex-start;gap:9px;color:#264664;font:12px/1.55 Tahoma,Arial,sans-serif}
+.moderation-blocked-content h2{font-size:18px;margin:0;color:#a74324}
+.moderation-blocked-content p{margin:0;white-space:pre-wrap;overflow-wrap:anywhere}
+.moderation-blocked-controls{display:flex;gap:8px;margin-top:10px}

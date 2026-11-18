@@ -1,0 +1,109 @@
+/* Shared browser-level floating layer: not a descendant of an overflow-hidden window. */
+.retro-floating-popup{
+  position:fixed!important;
+  z-index:2147483000!important;
+  box-sizing:border-box;
+  overflow-x:hidden;
+  overflow-y:auto;
+  border-radius:0!important;
+  min-width:0;
+  margin:0!important;
+  transform:none!important;
+  isolation:isolate;
+  /* Portal positioning owns TOP/LEFT. Old inline menus still declare BOTTOM
+     (e.g. .emote-panel {bottom:28px} / .reaction-menu {bottom:100%}).
+     A fixed element with top AND bottom set stretches to fill the interval,
+     which creates the giant 450px-high emoji rows visible in v1.0.3. */
+  bottom:auto!important;
+  right:auto!important;
+  height:max-content!important;
+  min-height:0!important;
+  align-content:start!important;
+}
+.retro-floating-popup.safe-color-menu{
+  width:217px;
+  padding:9px;
+  background:#f9fcff;
+  border:1px solid #558cbf;
+  outline:1px solid #ffffff;
+  box-shadow:2px 4px 12px #173c6280;
+  color:#24577c;
+  font:11px Tahoma,Arial,sans-serif;
+  text-align:left;
+}
+.retro-floating-popup.safe-color-menu .safe-color-preset{
+  display:grid!important;place-items:center;width:32px!important;min-width:0!important;
+  height:27px!important;padding:0!important;margin:0!important;
+  border:1px solid #748a9f!important;border-radius:0!important;
+  background-image:none!important;box-shadow:inset 0 0 0 1px #ffffff33;cursor:pointer;
+}
+.retro-floating-popup.safe-color-menu .safe-color-preset:hover{border:2px solid #0d4f8b!important;filter:brightness(1.13)}
+.retro-floating-popup.safe-color-menu .safe-color-preset.selected{outline:2px solid #0e549b;outline-offset:1px}
+.retro-floating-popup.safe-color-menu button:focus-visible{outline:2px solid #145da0!important;outline-offset:2px}
+.retro-floating-popup.emote-panel{
+  display:grid!important;
+  grid-template-columns:repeat(5,36px)!important;
+  grid-auto-rows:36px!important;
+  align-items:center;
+  justify-content:start;
+  width:212px;
+  gap:4px;
+  padding:8px;
+  background:#fff;
+  border:1px solid #7ea5c7;
+  box-shadow:0 3px 12px #143a6170;
+}
+.retro-floating-popup.emote-panel>button{
+  width:36px!important;
+  min-width:0!important;
+  height:36px!important;
+  min-height:0!important;
+  margin:0!important;
+  padding:0!important;
+  display:grid!important;
+  place-items:center;
+  line-height:1;
+  font-size:21px;
+  border:1px solid transparent;
+  background:#f4f8fe;
+}
+.retro-floating-popup.group-emote-panel{
+  display:block;
+  width:186px;
+  padding:7px;
+  background:#f7fbff;
+  border:1px solid #b7cfdf;
+  box-shadow:0 3px 12px #143a6170;
+}
+.retro-floating-popup.reaction-menu{display:flex;gap:3px;padding:5px;background:#fff;border:1px solid #9fbfdb;box-shadow:1px 3px 8px #22334455}
+.retro-floating-popup.menu-popup{min-width:205px;display:flex;flex-direction:column;padding:4px 2px;background:#fffef5;border:1px solid #7895bc;box-shadow:2px 4px 10px #19395850}
+.retro-floating-popup.contact-menu{display:flex;flex-direction:column;min-width:145px;background:#fff;border:1px solid #a4b4c8;box-shadow:0 3px 9px #0002}
+.retro-floating-popup.contact-menu button{text-align:left;border:0;background:none;padding:8px}
+.retro-floating-popup.contact-menu button:hover{background:#dceafa}
+.retro-floating-popup.contact-menu .group-option{padding:6px;font-size:10px}
+.retro-floating-popup.contact-menu .group-option select{display:block;margin-top:4px;width:100%}
+/* Dialogs use their existing fullscreen fixed backdrops, but are portal-mounted. */
+.ink-backdrop,.game-overlay,.contact-overview-backdrop,.report-dialog-backdrop,.retro-image-lightbox{z-index:2147482900!important}
+.retro-floating-popup.menu-popup>div,
+.retro-floating-popup.contact-menu>div{display:flex;flex-direction:column;min-width:100%}
+.retro-floating-popup.group-emote-panel>div{
+  display:grid;
+  grid-template-columns:repeat(4,38px);
+  grid-auto-rows:36px;
+  justify-content:start;
+  gap:4px;
+}
+.retro-floating-popup.group-emote-panel>div>button{
+  display:grid;
+  place-items:center;
+  width:38px;
+  height:36px;
+  min-width:0;
+  margin:0;
+  padding:0;
+  font-size:19px;
+  line-height:1;
+}
+.contact-options-anchor{position:relative;display:flex;align-items:center}
+.contact-options-toggle{border:0;background:transparent;color:#6d89a6;padding:4px;cursor:pointer;font-size:10px;line-height:1}
+.contact-options-toggle:hover,.contact-options-toggle[aria-expanded="true"]{background:#dceafa;color:#205e96}

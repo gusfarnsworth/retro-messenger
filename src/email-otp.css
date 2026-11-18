@@ -1,0 +1,17 @@
+/* v0.7.1 — classic Messenger email code verification */
+.otp-verify-form{display:flex;flex-direction:column;align-items:stretch;gap:10px;width:100%;padding:0 0 8px;color:#174d91}
+.otp-verify-heading{font-size:12px;line-height:1.55;text-align:center}
+.otp-verify-heading strong{display:block;font-size:15px;color:#164f8a;margin-bottom:7px}
+.otp-verify-heading p{font-size:11px;margin:0;color:#536e88;overflow-wrap:anywhere}
+.otp-verify-heading b{color:#164f8a}
+.otp-verify-form label{font-size:11px;font-weight:bold;text-align:center}
+.otp-code-input{display:block;width:100%;height:53px!important;padding:7px 8px!important;border:1px solid #668fb7!important;background:#fff!important;text-align:center;font-family:Consolas,'Courier New',monospace!important;font-size:27px!important;font-weight:bold;letter-spacing:.3em;color:#114f87!important;border-radius:0!important;outline-offset:2px}
+.otp-code-input:focus-visible{outline:2px solid #3686c9}
+.otp-code-help{font-size:10px;line-height:1.45;color:#5d7894;text-align:center}
+.otp-verify-form .otp-verify-button{align-self:stretch;margin-top:5px;min-height:29px;padding:6px 9px;font-size:11px}
+.otp-verify-form .otp-resend,.otp-verify-form .otp-back{align-self:center;margin:2px 0 0;padding:3px 5px;font-size:11px;text-decoration:underline;color:#1763a5}
+.otp-verify-form button:disabled{cursor:not-allowed;opacity:.55}
+
+/* v0.9.3 registration feedback */
+.signup-username-status,.signup-email-hint{display:block;font-size:10px;line-height:1.4;font-weight:normal;color:#5e7890;margin-top:2px}
+.signup-username-status.available{color:#176b40}.signup-username-status.taken,.signup-username-status.error{color:#a51624}.signup-username-status.checking{color:#0059a8}
