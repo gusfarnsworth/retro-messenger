@@ -1,70 +1,70 @@
 {
-    "$schema":  "https://schema.tauri.app/config/2",
-    "productName":  "Retro Messenger",
-    "version":  "1.1.1",
-    "identifier":  "app.retromessenger.client",
-    "build":  {
-                  "beforeDevCommand":  "npm run dev",
-                  "devUrl":  "http://127.0.0.1:1420",
-                  "beforeBuildCommand":  "npm run build",
-                  "frontendDist":  "../dist"
-              },
-    "app":  {
-                "windows":  [
-                                {
-                                    "label":  "main",
-                                    "title":  "Retro Messenger â€” Contacts",
-                                    "width":  340,
-                                    "height":  685,
-                                    "minWidth":  315,
-                                    "minHeight":  470,
-                                    "center":  true,
-                                    "decorations":  false,
-                                    "shadow":  false
-                                }
-                            ],
-                "security":  {
-                                 "csp":  null
-                             }
-            },
-    "bundle":  {
-                   "active":  true,
-                   "targets":  [
-                                   "nsis"
-                               ],
-                   "icon":  [
-                                "icons/icon.png",
-                                "icons/icon.ico"
-                            ],
-                   "publisher":  "retromessenger",
-                   "copyright":  "Copyright 2026 Retro Messenger",
-                   "homepage":  "https://retromessenge.vercel.app",
-                   "windows":  {
-                                   "nsis":  {
-                                                "installerIcon":  "icons/icon.ico",
-                                                "uninstallerIcon":  "icons/icon.ico",
-                                                "headerImage":  "installer/assets/vista-header.bmp",
-                                                "sidebarImage":  "installer/assets/vista-sidebar.bmp",
-                                                "uninstallerHeaderImage":  "installer/assets/vista-header.bmp",
-                                                "installerHooks":  "installer/vista-ui.nsh",
-                                                "installMode":  "currentUser",
-                                                "languages":  [
-                                                                  "English"
-                                                              ],
-                                                "compression":  "lzma"
-                                            }
-                               },
-                   "createUpdaterArtifacts":  true
-               },
-    "plugins":  {
-                    "updater":  {
-                                    "pubkey":  "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDY2NzYyMjZDQjcxNzE1MjgKUldRb0ZSZTNiQ0oyWmhva1BRdFhzZHNGUytsQUFMeUsrcE1oNDFMYTdPK2phQzhwUlJIaFI3SmgK",
-                                    "endpoints":  [
-                                                      "https://github.com/gusfarnsworth/retro-messenger/releases/latest/download/latest.json"
-                                                  ],
-                                    "windows":  {
-                                                    "installMode":  "passive"
-                                                }
-                                }
-                }
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "Retro Messenger",
+  "version": "1.1.2",
+  "identifier": "app.retromessenger.client",
+  "build": {
+    "beforeDevCommand": "npm run dev",
+    "devUrl": "http://127.0.0.1:1420",
+    "beforeBuildCommand": "npm run build",
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "windows": [
+      {
+        "label": "main",
+        "title": "Retro Messenger â€” Contacts",
+        "width": 340,
+        "height": 685,
+        "minWidth": 315,
+        "minHeight": 470,
+        "center": true,
+        "decorations": false,
+        "shadow": false
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": [
+      "nsis"
+    ],
+    "icon": [
+      "icons/icon.png",
+      "icons/icon.ico"
+    ],
+    "publisher": "retromessenger",
+    "copyright": "Copyright 2026 Retro Messenger",
+    "homepage": "https://retromessenge.vercel.app",
+    "windows": {
+      "nsis": {
+        "installerIcon": "icons/icon.ico",
+        "uninstallerIcon": "icons/icon.ico",
+        "headerImage": "installer/assets/vista-header.bmp",
+        "sidebarImage": "installer/assets/vista-sidebar.bmp",
+        "uninstallerHeaderImage": "installer/assets/vista-header.bmp",
+        "installerHooks": "installer/vista-ui.nsh",
+        "installMode": "currentUser",
+        "languages": [
+          "English"
+        ],
+        "compression": "lzma"
+      }
+    },
+    "createUpdaterArtifacts": true
+  },
+  "plugins": {
+    "updater": {
+      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDY2NzYyMjZDQjcxNzE1MjgKUldRb0ZSZTNiQ0oyWmhva1BRdFhzZHNGUytsQUFMeUsrcE1oNDFMYTdPK2phQzhwUlJIaFI3SmgK",
+      "endpoints": [
+        "https://github.com/gusfarnsworth/retro-messenger/releases/latest/download/latest.json"
+      ],
+      "windows": {
+        "installMode": "passive"
+      }
+    }
+  }
 }
